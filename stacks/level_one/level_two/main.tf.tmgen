@@ -1,0 +1,5 @@
+module "level_two" {
+    source = "${terramate.stack.path.to_root}/modules/foo"
+
+    foo_variable = global.foo_variable
+}

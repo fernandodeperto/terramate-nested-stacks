@@ -1,0 +1,5 @@
+module "level_one" {
+    source = "${terramate.stack.path.to_root}/modules/bar"
+
+    bar_variable = global.bar_variable
+}

@@ -1,0 +1,29 @@
+bin/*
+coverage.txt
+.terraform
+.terraform.lock.hcl
+/cmd/terramate/terramate
+/testdata/testserver/my-user.tm
+
+# Profiling artifacts
+cpu.prof
+mem.prof
+*.test
+*.tfplan
+*.plan
+
+# Go Workspaces artifacts
+/go.work
+
+# VSCode artifacts
+.vscode/
+
+# Go releaser artifacts
+dist/
+
+# MacOS
+.DS_Store
+cosign.pub
+
+terraform.tfstate
+terraform.tfstate.backup
