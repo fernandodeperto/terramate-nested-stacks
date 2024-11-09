@@ -8,7 +8,7 @@ Figure 1: Nested stacks showing a hierarchical structure
 This is in opposition to what seems to be the default result, which is that nested stacks are merely specializations of their parents. This is a natural consequence of the way code generation works in Terramate. Consider for example the following snippet, added to the parent stack, here called `level_one`:
 
 ```hcl
-generate_hcl "_bar.tf" {
+generate_hcl "_terraform_data.tf" {
     content {
         resource "terraform_data" "example" {
             input = "example"
@@ -73,6 +73,8 @@ When writing a code generation block, simply set `inherit` to `false`, like the 
 
 ```hcl
 generate_hcl "_bar.tf" {
+    inherit = false
+
     content {
         resource "terraform_data" "example" {
             input = "example"
